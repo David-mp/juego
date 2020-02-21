@@ -1,0 +1,12 @@
+{ 
+  "NAME":"juego",
+  "DESCRIPTION": "to run examples",
+  "NUM_DESIRED_AGENTS": 2, 
+  "PROJECT_FOLDER": "juego", 
+  "AGENT_GRANT_INTERVAL":180, 
+  "AGENT_STATS_INTERVAL":180,  
+  "LAN": "true", 
+  "CLOUDBOOK_MAXTHREADS": 10, 
+  "NON-RELIABLE_AGENT_MODE": true,
+  "AGENT0_ONLY_DU0": false
+}
