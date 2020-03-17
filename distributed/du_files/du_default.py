@@ -8,9 +8,9 @@ import time
 import json
 import sys
 
-CONSTbg_sprites = [pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/zelda3_1.jpg'),pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/zelda3_2.jpg'),pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/zelda3_3.jpg'),pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/zelda3_4.jpg'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/bg_end_5.jpg')]
-CONSTc_sprites = [pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Coins/coin1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Coins/coin2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Coins/coin3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Coins/coin4.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Coins/coin5.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Coins/coin6.png')]
-CONSTp_sprites = [[[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/right1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/right2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/right3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/right4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/left1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/left2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/left3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/left4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/down1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/down2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/down3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/down4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/up1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/up2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/up3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Mario/up4.png')]],[[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/right1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/right2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/right3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/right4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/left1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/left2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/left3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/left4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/down1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/down2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/down3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/down4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/up1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/up2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/up3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Red/up4.png')]],[[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/right1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/right2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/right3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/right4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/left1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/left2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/left3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/left4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/down1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/down2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/down3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/down4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/up1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/up2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/up3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Sonic/up4.png')]],[[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/right1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/right2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/right3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/right4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/left1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/left2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/left3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/left4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/down1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/down2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/down3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/down4.png')],[pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/up1.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/up2.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/up3.png'), pygame.image.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Undertale/up4.png')]]]
+CONSTbg_sprites = [pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/zelda3_1.jpg'),pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/zelda3_2.jpg'),pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/zelda3_3.jpg'),pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/zelda3_4.jpg'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/bg_end_7.jpg')]
+CONSTc_sprites = [pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Coins/coin1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Coins/coin2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Coins/coin3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Coins/coin4.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Coins/coin5.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Coins/coin6.png')]
+CONSTp_sprites = [[[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/right1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/right2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/right3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/right4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/left1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/left2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/left3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/left4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/down1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/down2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/down3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/down4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/up1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/up2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/up3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Mario/up4.png')]],[[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/right1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/right2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/right3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/right4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/left1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/left2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/left3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/left4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/down1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/down2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/down3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/down4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/up1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/up2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/up3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Red/up4.png')]],[[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/right1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/right2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/right3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/right4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/left1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/left2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/left3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/left4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/down1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/down2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/down3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/down4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/up1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/up2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/up3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Sonic/up4.png')]],[[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/right1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/right2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/right3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/right4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/left1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/left2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/left3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/left4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/down1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/down2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/down3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/down4.png')],[pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/up1.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/up2.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/up3.png'), pygame.image.load('/home/pi/cloudbook/juego/distributed/Sprites/Undertale/up4.png')]]]
 CONSTcoin_diameter = 24
 CONSTroom_width = 700
 CONSTroom_height = 500
@@ -18,33 +18,35 @@ CONSTplayer_speed = 125
 invoker=None
 cloudbook_sync_timeout=False
 
-def f4(player_selected, status):
+def f3():
 #Automated code for global var:
- #fun_name: f4 final fun name: f4 globalName: game_status destiny du: 0 global_fun_name: f1
+ #fun_name: f3 final fun name: f3 globalName: game_status destiny du: 0 global_fun_name: f1
 #============================global vars automatic code=========================
 	#game_status
-	if not hasattr(f4, "game_status"):
-		f4.game_status = None
+	if not hasattr(f3, "game_status"):
+		f3.game_status = None
 
-	if not hasattr(f4, "ver_game_status"):
-		f4.ver_game_status = 0
+	if not hasattr(f3, "ver_game_status"):
+		f3.ver_game_status = 0
         
-	aux_game_status,aux_ver = invoker(['du_0'],'f1',"'None',"+str(f4.ver_game_status),'f4')
+	aux_game_status,aux_ver = invoker(['du_0'],'f1',"'None',"+str(f3.ver_game_status),'f3')
 	if aux_game_status != "None":
-		f4.game_status = aux_game_status
-	game_status=f4.game_status
-	f4.ver_game_status= aux_ver
-	ver_game_status= f4.ver_game_status
+		f3.game_status = aux_game_status
+	game_status=f3.game_status
+	f3.ver_game_status= aux_ver
+	ver_game_status= f3.ver_game_status
 		#	global game_status#Aqui va el chorrazo de codigo
-	aux_status = game_status
-	for i in range(0,len(aux_status)-1):
-		if i != player_selected:
-			status[i] = aux_status[i]
+	photogram_counter = 0
+	while True:
+		photogram_counter = photogram_counter + 1
+		invoker(['du_0'], 'f1','"f1.game_status['+str(7)+']%3d'+str(photogram_counter)+' ", '+str(ver_game_status),'f3')#[0] = photogram_counter
+		game_status[7]=photogram_counter
+		time.sleep(0.05)
 
 
 	return json.dumps('cloudbook: done') 
 
-def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joystick_input, window, speed):
+def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joystick_input, window, speed, photogram_counter):
 	my_player = status[player_selected]
 	my_player_x = status[player_selected][0] + status[player_selected][2]*speed*status[player_selected][8]
 	my_player_y = status[player_selected][1] + status[player_selected][3]*speed*status[player_selected][8]
@@ -58,7 +60,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = 0
 			status[player_selected][4] = 0
 			status[player_selected][6] = 0
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 1
 			aux_player = status[player_selected]
 			player_has_moved = True
@@ -70,7 +72,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				#__CLOUDBOOK:NONBLOCKING__
@@ -84,7 +86,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = 0
 			status[player_selected][4] = 1
 			status[player_selected][6] = 0
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 1
 			aux_player = status[player_selected]
 			player_has_moved = True
@@ -96,7 +98,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				#__CLOUDBOOK:NONBLOCKING__
@@ -111,7 +113,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = 1
 			status[player_selected][4] = 2
 			status[player_selected][6] = 0
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 1
 			aux_player = status[player_selected]
 			player_has_moved = True
@@ -123,7 +125,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				#__CLOUDBOOK:NONBLOCKING__
@@ -138,7 +140,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = -1
 			status[player_selected][4] = 3
 			status[player_selected][6] = 0
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 1
 			aux_player = status[player_selected]
 			player_has_moved = True
@@ -150,7 +152,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				#__CLOUDBOOK:NONBLOCKING__
@@ -168,7 +170,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = 0
 			status[player_selected][5] = 0
 			status[player_selected][6] = 1
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 0
 			aux_player = status[player_selected]
 			#__CLOUDBOOK:NONBLOCKING__
@@ -189,7 +191,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				player_sprite = CONSTp_sprites[player_selected - 1][aux_player[4]][aux_player[5] // 6]
@@ -207,7 +209,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = 0
 			status[player_selected][5] = 0
 			status[player_selected][6] = 1
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 0
 			aux_player = status[player_selected]
 			#__CLOUDBOOK:NONBLOCKING__
@@ -228,7 +230,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				player_sprite = CONSTp_sprites[player_selected - 1][aux_player[4]][aux_player[5] // 6]
@@ -246,7 +248,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = 0
 			status[player_selected][5] = 0
 			status[player_selected][6] = 1
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 0
 			aux_player = status[player_selected]
 			#__CLOUDBOOK:NONBLOCKING__
@@ -267,7 +269,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				player_sprite = CONSTp_sprites[player_selected - 1][aux_player[4]][aux_player[5] // 6]
@@ -285,7 +287,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 			status[player_selected][3] = 0
 			status[player_selected][5] = 0
 			status[player_selected][6] = 1
-			status[player_selected][7] = time.time()
+			status[player_selected][7] = status[7]
 			status[player_selected][8] = 0
 			aux_player = status[player_selected]
 			#__CLOUDBOOK:NONBLOCKING__
@@ -306,7 +308,7 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 				status[player_selected][3] = 0
 				status[player_selected][5] = 0
 				status[player_selected][6] = 1
-				status[player_selected][7] = time.time()
+				status[player_selected][7] = status[7]
 				status[player_selected][8] = 0
 				aux_player = status[player_selected]
 				player_sprite = CONSTp_sprites[player_selected - 1][aux_player[4]][aux_player[5] // 6]
@@ -331,31 +333,31 @@ def f9(player_selected, status, keys_last_cycle, keys, joystick_input, last_joys
 
 	return json.dumps('cloudbook: done') 
 
-def f8(player, player_sprite, room_sprite1, room_sprite2, window, x_dir, y_dir, status):
+def f8(player, player_sprite, room_sprite1, room_sprite2, window, x_dir, y_dir):
 	clock = pygame.time.Clock()
 	if x_dir == 1:
-		for x in range(0,CONSTroom_width,2):
+		for x in range(0,CONSTroom_width,4):
 			window.blit(room_sprite1,(-x,0))
 			window.blit(room_sprite2,(CONSTroom_width-x,0))
 			window.blit(player_sprite,(CONSTroom_width - x,player[1]%CONSTroom_height))
 			pygame.display.update()
 			clock.tick(100)
 	elif x_dir == -1:
-		for x in range(0,CONSTroom_width,2):
+		for x in range(0,CONSTroom_width,4):
 			window.blit(room_sprite1,(-CONSTroom_width+x,0))
 			window.blit(room_sprite2,(x,0))
 			window.blit(player_sprite,(x,player[1]%CONSTroom_height))
 			pygame.display.update()
 			clock.tick(100)
 	elif y_dir == 1:
-		for y in range(0,CONSTroom_height,2):
+		for y in range(0,CONSTroom_height,3):
 			window.blit(room_sprite1,(0,0-y))
 			window.blit(room_sprite2,(0,CONSTroom_height-y))
 			window.blit(player_sprite,(player[0]%CONSTroom_width, CONSTroom_height-y))
 			pygame.display.update()
 			clock.tick(100)
 	elif y_dir == -1:
-		for y in range(0,CONSTroom_height,2):
+		for y in range(0,CONSTroom_height,3):
 			window.blit(room_sprite2,(0,y))
 			window.blit(room_sprite1,(0,-CONSTroom_height+y))
 			window.blit(player_sprite,(player[0]%CONSTroom_width, y))
@@ -410,10 +412,9 @@ def f7(player_selected, coin):
 	aux_status = game_status
 	my_player = aux_status[player_selected]
 	if coin in aux_status[0]:
-		print("DEBERIA SONAR!!")
 		aux_status[0].remove(coin)
 		aux_status[6][player_selected - 1] = aux_status[6][player_selected - 1] + 1
-		CONSTcoinSound1 = pygame.mixer.Sound('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Music/coin2.wav')
+		CONSTcoinSound1 = pygame.mixer.Sound('/home/pi/cloudbook/juego/distributed/Sprites/Music/coin2.wav')
 		CONSTcoinSound1.set_volume(0.2)
 		CONSTcoinSound1.play()
 		if len(aux_status[0]) == 0:
@@ -438,10 +439,13 @@ def parallel_f6(player_selected):
 	if not hasattr(parallel_f6, "lock"):
 		parallel_f6.lock = threading.Lock()
 	with parallel_f6.lock:
+		if player_selected == 1:
+			#__CLOUDBOOK:NONBLOCKING__
+			nonblockingf3()
 		pygame.init()
 		pygame.display.set_caption("Game Window " + str(player_selected))
 		pygame.mixer.init()
-		music = pygame.mixer.music.load('C:/Users/ManagingandInnovatio/cloudbook/juego/distributed/Sprites/Music/music.mp3')
+		music = pygame.mixer.music.load('/home/pi/cloudbook/juego/distributed/Sprites/Music/music.mp3')
 		time.sleep(0.5)
 		pygame.mixer.music.set_volume(0.2)
 		pygame.mixer.music.play(-1)
@@ -451,10 +455,11 @@ def parallel_f6(player_selected):
 		refresh_local_counter = 0
 		movement_counter = 0
 		coin_sprite_counter = 0
+		photogram_counter = -1
 		run = True
 		sorted_status = False
 		window = pygame.display.set_mode((CONSTroom_width, CONSTroom_height))
-		CLOCK_FPS = 25
+		CLOCK_FPS = 20
 		clock = pygame.time.Clock()
 		keys = pygame.key.get_pressed()
 		if not pygame.joystick.get_init():
@@ -482,6 +487,7 @@ def parallel_f6(player_selected):
 		mean = sum(ping_measures)/len(ping_measures)
 		print("MEAN =", mean)
 		print("CLOCK INTERVAL = ",clk)
+		time.sleep(1)
 		while run:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
@@ -503,6 +509,7 @@ def parallel_f6(player_selected):
 					if player_selected == 1:
 						CLOCK_FPS = f13(time_measures)
 					time_measures = []
+				status[7] = status[7] + 1
 				refresh_local_counter = refresh_local_counter + 1
 				if refresh_local_counter >= 5:
 					#__CLOUDBOOK:NONBLOCKING__
@@ -519,10 +526,10 @@ def parallel_f6(player_selected):
 				keys_last_cycle = keys
 				keys = pygame.key.get_pressed()
 				speed = round(CONSTplayer_speed/CLOCK_FPS)
-				status = f9(player_selected,status,keys_last_cycle,keys,joystick_input,last_joystick_input,window,speed)
+				status = f9(player_selected,status,keys_last_cycle,keys,joystick_input,last_joystick_input,window,speed,photogram_counter)
 				now = time.time()
-				last_cycle_positions = f11(player_selected,status,now,CLOCK_FPS,last_cycle_positions)
-				f10(player_selected,status,coin_sprite_counter,window,CLOCK_FPS,last_cycle_positions)
+				last_cycle_positions = f11(player_selected,status,now,CLOCK_FPS,last_cycle_positions,photogram_counter)
+				f10(player_selected,status,coin_sprite_counter,window,CLOCK_FPS,last_cycle_positions,photogram_counter)
 				pygame.display.update()
 			else:
 				if not sorted_status:
@@ -577,7 +584,7 @@ def f13(time_measures):
 
 	return json.dumps('cloudbook: done') 
 
-def f11(player_selected, status, now, CLOCK_FPS, last_cycle_positions):
+def f11(player_selected, status, now, CLOCK_FPS, last_cycle_positions, photogram_counter):
 	for n_player in range(1,len(last_cycle_positions)):
 		player = status[n_player]
 		time_passed = now - player[7]
@@ -588,8 +595,9 @@ def f11(player_selected, status, now, CLOCK_FPS, last_cycle_positions):
 			y = player[1] + player[3]*speed*movement_counter
 			last_cycle_positions[n_player][2] = movement_counter
 		else:
-			x = player[0] + round(player[2]*speed*time_passed*CLOCK_FPS)
-			y = player[1] + round(player[3]*speed*time_passed*CLOCK_FPS)
+			unkown_cycles = status[7] - player[7]
+			x = player[0] + round(player[2]*speed*unkown_cycles)
+			y = player[1] + round(player[3]*speed*unkown_cycles)
 			if player[2] == 0 and player[3] == 0:
 				playerWalkCount = 0
 			else:
@@ -608,7 +616,7 @@ def f11(player_selected, status, now, CLOCK_FPS, last_cycle_positions):
 
 	return json.dumps('cloudbook: done') 
 
-def f10(player_selected, aux_status, aux_coin_count, window, CLOCK_FPS, last_cycle_positions):
+def f10(player_selected, aux_status, aux_coin_count, window, CLOCK_FPS, last_cycle_positions, photogram_counter):
 	coins = aux_status[0]
 	speed = round(CONSTplayer_speed/CLOCK_FPS)
 	my_player = aux_status[player_selected]
@@ -688,6 +696,32 @@ def f10(player_selected, aux_status, aux_coin_count, window, CLOCK_FPS, last_cyc
 
 	return json.dumps('cloudbook: done') 
 
+def f4(player_selected, status):
+#Automated code for global var:
+ #fun_name: f4 final fun name: f4 globalName: game_status destiny du: 0 global_fun_name: f1
+#============================global vars automatic code=========================
+	#game_status
+	if not hasattr(f4, "game_status"):
+		f4.game_status = None
+
+	if not hasattr(f4, "ver_game_status"):
+		f4.ver_game_status = 0
+        
+	aux_game_status,aux_ver = invoker(['du_0'],'f1',"'None',"+str(f4.ver_game_status),'f4')
+	if aux_game_status != "None":
+		f4.game_status = aux_game_status
+	game_status=f4.game_status
+	f4.ver_game_status= aux_ver
+	ver_game_status= f4.ver_game_status
+		#	global game_status#Aqui va el chorrazo de codigo
+	aux_status = game_status
+	for i in range(0,len(aux_status)):
+		if i != player_selected:
+			status[i] = aux_status[i]
+
+
+	return json.dumps('cloudbook: done') 
+
 
 def nonblockingf2(player_selected,aux_player):
 	threadf2 = threading.Thread(target=f2, daemon = False, args = [player_selected,aux_player])
@@ -697,6 +731,11 @@ def nonblockingf2(player_selected,aux_player):
 def nonblockingf7(player_selected,c):
 	threadf7 = threading.Thread(target=f7, daemon = False, args = [player_selected,c])
 	threadf7.start()
+	return json.dumps("thread launched")
+
+def nonblockingf3():
+	threadf3 = threading.Thread(target=f3, daemon = False, args = [])
+	threadf3.start()
 	return json.dumps("thread launched")
 
 def nonblockingf4(player_selected,status):
